@@ -1,119 +1,107 @@
-/* 4 - External */
-body {
-  padding-bottom: 500px;
+/* Tema claro / escurto */
+:root {
+    --bg: #fff;
+    --texto: #111;
+    --borda: #e5e7eb;
+    --caixa: #f8fafc;
+    --acao: #2563eb;
 }
 
-h3 {
-  color: green;
+[data-tema="escuro"] {
+    --bg: #0b1220;
+    --texto: #e5e7eb;
+    --borda: #1f2937;
+    --caixa: #111827;
+    --acao: #38bdf8;
 }
 
-/* p {
-  color: blueviolet;
-} */
-
-/* Algum comentário */
-/* mais um comentário * /
-/* Terceiro comentário */
-
-/* classes */
-.paragraph {
-  background-color: #000;
-  color: aqua;
-  padding: 5px;
+/* Estilos padrão */
+*{
+    box-sizing: border-box;
 }
 
-/* ids */
-#exclusive-title {
-  background-color: purple;
-  color: yellow;
-  padding: 10px;
-  font-size: 40px;
+html, body{
+    height: 100%;
 }
 
-/* ordem das regras */
-h2 {
-  border-bottom: 2px solid red;
+body{
+    margin: 0;
+    font-family: Arial;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    color: var(--texto);
 }
 
-.titulo {
-  border-bottom: 3px solid blue;
+.topo{
+    border-bottom: 1px solid var(--borda);
 }
 
-#algum-titulo {
-  border-bottom: 4px solid green;
+.topo .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .75rem 1rem;
 }
 
-/* Nome de cores */
-.color-name {
-  color: crimson;
+.caixa{
+    border: 1px solid var(--borda);
+    background-color: var(--caixa);
+    border-radius: .5rem;
+    padding: 2rem 1rem;
+    max-width: 80%;
+    margin: 1.5rem auto;
 }
 
-/* Hex */
-.hex {
-  color: #55a398;
+h1{
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
 }
 
-.hex-2 {
-  color: #00eaff;
+p{
+    margin: 1rem 0;
 }
 
-/* Aprofundando em hex */
-.simple-hex {
-  color: #333;
+form{
+    display: grid;
+    gap: .5rem;
 }
 
-.simple-hex-2 {
-  color: #a5f;
+label{
+    font-weight: 600;
 }
 
-/* RGB */
-.rgb {
-  color: rgb(255, 0, 0);
+input{
+    padding: .7rem .9rem;
+    border: 1px solid var(--borda);
+    border-radius: .5rem;
+    background-color: var(--bg);
+    color: var(--texto);
 }
 
-.mixed-rgb {
-  color: rgb(199, 21, 47);
+.btn{
+    padding: .6rem .9rem;
+    border: 1px solid var(--borda);
+    background-color: var(--bg);
+    color: var(--texto);
+    border-radius: .5rem;
+    cursor: pointer;
+    max-width: 200px;
 }
 
-/* RGBA */
-.rgba {
-  color: rgba(100, 199, 45, 0.3);
+.btn.primario{
+        margin-top: 1rem;
+        background-color: var(--acao);
+        color: #fff;
 }
 
-/* HSL */
-.hsl {
-  color: hsl(100, 20%, 50%);
-}
-
-.hsl-2 {
-  color: hsl(201, 82%, 48%);
-}
-
-/* Background */
-.bg {
-  background-color: #000;
-  color: yellow;
-}
-
-.bg-2 {
-  background-color: rgb(200, 20, 40);
-  color: #00eaff;
-}
-
-/* Background opacity */
-.bg-opacity {
-  background-color: green;
-  opacity: 0.2;
-}
-
-.bg-opacity-2 {
-  background-color: #999;
-  color: #000;
-  opacity: 0.8;
-}
-
-/* RGBA com opacidade */
-.rgba-opacity {
-  background-color: rgba(90, 120, 20, 0.2);
-  color: #000;
+.rodape{
+    border-top: 1px solid var(--borda);
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    margin-top: auto;
 }
